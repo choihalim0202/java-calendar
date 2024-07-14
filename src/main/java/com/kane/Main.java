@@ -1,17 +1,68 @@
 package com.kane;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import com.kane.calendarapp.event.*;
+import com.kane.calendarapp.event.update.UpdateMeeting;
+import com.kane.calendarapp.reader.EventCsvReader;
+import com.kane.calendarapp.reader.RawCsvReader;
+import java.io.IOException;
+import java.time.ZonedDateTime;
+import java.util.List;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        Schedule schedule = new Schedule();
+
+        EventCsvReader csvReader = new EventCsvReader(new RawCsvReader());
+        String meetingCsvPath = "/data/meeting.csv";
+        String noDisturbanceCsvPath = "/data/no_disturbance.csv";
+        String outOfOfficeCsvPath = "/data/out_of_office.csv";
+        String toDoCsvPath = "/data/to_do.csv";
+
+
+        List<Meeting> meetings = csvReader.readMeetings(meetingCsvPath);
+        meetings.forEach(schedule::add);
+
+        List<NoDisturbance> noDisturbances = csvReader.readNoDisturbance(noDisturbanceCsvPath);
+        noDisturbances.forEach(schedule::add);
+
+        List<OutOfOffice> outOfOffices = csvReader.readOutOfOffice(outOfOfficeCsvPath);
+        outOfOffices.forEach(schedule::add);
+
+        List<Todo> todos = csvReader.readTodo(toDoCsvPath);
+        todos.forEach(schedule::add);
+
+        schedule.printAll();
+
+        Meeting meeting = meetings.get(0);
+        meeting.print();
+
+        System.out.println("수정 후 ... ");
+        meeting.vaildateAndUpdate(
+                new UpdateMeeting(
+                        "new title",
+                        ZonedDateTime.now(),
+                        ZonedDateTime.now().plusHours(1),
+                        null,
+                        "A",
+                        "new agenda"
+
+                )
+        );
+
+        meeting.delete(true);
+        System.out.println("삭제 후 수정 시도 ... ");
+        meeting.vaildateAndUpdate(
+                new UpdateMeeting(
+                        "new title",
+                        ZonedDateTime.now(),
+                        ZonedDateTime.now().plusHours(1),
+                        null,
+                        "B",
+                        "new agenda2"
+
+                )
+        );
+        meeting.print();
     }
 }
