@@ -1,9 +1,9 @@
-package com.kane.calendarapp.reader;
+package com.kane.calendar.reader;
 
-import com.kane.calendarapp.event.Meeting;
-import com.kane.calendarapp.event.NoDisturbance;
-import com.kane.calendarapp.event.OutOfOffice;
-import com.kane.calendarapp.event.Todo;
+import com.kane.calendar.event.Meeting;
+import com.kane.calendar.event.NoDisturbance;
+import com.kane.calendar.event.OutOfOffice;
+import com.kane.calendar.event.Todo;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.ZoneId;

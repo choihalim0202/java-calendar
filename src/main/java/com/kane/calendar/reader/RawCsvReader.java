@@ -1,4 +1,4 @@
-package com.kane.calendarapp.reader;
+package com.kane.calendar.reader;
 
 import com.opencsv.CSVReader;
 import java.io.IOException;

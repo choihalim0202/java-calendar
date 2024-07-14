@@ -1,6 +1,6 @@
-package com.kane.calendarapp.event;
+package com.kane.calendar.event;
 
-import com.kane.calendarapp.event.update.AbstractAuditableEvent;
+import com.kane.calendar.event.update.AbstractAuditableEvent;
 import java.time.ZonedDateTime;
 
 public class NoDisturbance extends AbstractEvent {

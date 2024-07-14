@@ -1,9 +1,9 @@
 package com.kane;
 
-import com.kane.calendarapp.event.*;
-import com.kane.calendarapp.event.update.UpdateMeeting;
-import com.kane.calendarapp.reader.EventCsvReader;
-import com.kane.calendarapp.reader.RawCsvReader;
+import com.kane.calendar.event.*;
+import com.kane.calendar.event.update.UpdateMeeting;
+import com.kane.calendar.reader.EventCsvReader;
+import com.kane.calendar.reader.RawCsvReader;
 import java.io.IOException;
 import java.time.ZonedDateTime;
 import java.util.List;

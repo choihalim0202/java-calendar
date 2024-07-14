@@ -1,6 +1,6 @@
-package com.kane.calendarapp.reader;
+package com.kane.calendar.reader;
 
-import com.kane.calendarapp.event.Meeting;
+import com.kane.calendar.event.Meeting;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

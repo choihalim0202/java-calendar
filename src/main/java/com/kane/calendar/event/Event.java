@@ -1,4 +1,4 @@
-package com.kane.calendarapp.event;
+package com.kane.calendar.event;
 
 public interface Event {
     void print();

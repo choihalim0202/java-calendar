@@ -1,7 +1,7 @@
-package com.kane.calendarapp.event;
+package com.kane.calendar.event;
 
-import com.kane.calendarapp.event.update.AbstractAuditableEvent;
-import com.kane.calendarapp.event.update.UpdateMeeting;
+import com.kane.calendar.event.update.AbstractAuditableEvent;
+import com.kane.calendar.event.update.UpdateMeeting;
 import java.time.ZonedDateTime;
 import java.util.Set;
 

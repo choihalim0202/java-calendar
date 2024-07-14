@@ -1,7 +1,7 @@
-package com.kane.calendarapp.event;
+package com.kane.calendar.event;
 
-import com.kane.calendarapp.event.update.AbstractAuditableEvent;
-import com.kane.calendarapp.exception.InvalidEventException;
+import com.kane.calendar.event.update.AbstractAuditableEvent;
+import com.kane.calendar.exception.InvalidEventException;
 import java.time.Duration;
 import java.time.ZonedDateTime;
 

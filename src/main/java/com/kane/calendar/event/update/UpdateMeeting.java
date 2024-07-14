@@ -1,4 +1,4 @@
-package com.kane.calendarapp.event.update;
+package com.kane.calendar.event.update;
 
 import java.time.ZonedDateTime;
 import java.util.Set;
