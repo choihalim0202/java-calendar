@@ -1,4 +1,4 @@
-package com.kane.calendar.event;
+package com.kane.calendar.domain;
 
 import java.util.ArrayList;
 import java.util.List;

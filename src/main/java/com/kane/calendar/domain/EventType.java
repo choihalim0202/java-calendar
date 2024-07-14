@@ -1,4 +1,4 @@
-package com.kane.calendar.event;
+package com.kane.calendar.domain;
 
 public enum EventType {
     MEETING,

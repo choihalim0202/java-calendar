@@ -1,4 +1,4 @@
-package com.kane.calendar.event.update;
+package com.kane.calendar.domain.update;
 
 import java.time.ZonedDateTime;
 import java.util.Set;

@@ -1,6 +1,6 @@
-package com.kane.calendar.event;
+package com.kane.calendar.domain;
 
-import com.kane.calendar.event.update.AbstractAuditableEvent;
+import com.kane.calendar.domain.update.AbstractAuditableEvent;
 import java.time.ZonedDateTime;
 
 public class OutOfOffice extends AbstractEvent {

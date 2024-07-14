@@ -1,4 +1,4 @@
-package com.kane.calendar.event;
+package com.kane.calendar.domain;
 
 public interface Event {
     void print();

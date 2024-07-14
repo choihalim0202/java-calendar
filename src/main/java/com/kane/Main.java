@@ -1,7 +1,7 @@
 package com.kane;
 
-import com.kane.calendar.event.*;
-import com.kane.calendar.event.update.UpdateMeeting;
+import com.kane.calendar.domain.*;
+import com.kane.calendar.domain.update.UpdateMeeting;
 import com.kane.calendar.reader.EventCsvReader;
 import com.kane.calendar.reader.RawCsvReader;
 import java.io.IOException;
